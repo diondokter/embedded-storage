@@ -117,7 +117,7 @@ impl Region for Page {
 	}
 }
 
-///
+/// Utility wrapper that implements [`Storage`] on any [`NorFlash`]
 #[derive(Debug)]
 pub struct RmwNorFlashStorage<'a, S> {
 	storage: S,
@@ -195,7 +195,7 @@ where
 	}
 }
 
-///
+/// Utility wrapper that implements [`Storage`] on any [`MultiwriteNorFlash`]
 pub struct RmwMultiwriteNorFlashStorage<'a, S> {
 	storage: S,
 	merge_buffer: &'a mut [u8],
